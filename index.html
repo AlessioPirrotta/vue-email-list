@@ -11,7 +11,7 @@
 <body >
     <div id="app" class="">
         <main style="height: 100vh;" class="bg-dark d-flex flex-column justify-content-center align-items-center">
-            <div v-for="(item, index) in arrayMail" :key="index">
+            <div v-for="(item, index) in arrayMail" :key="index" v-show="arrayMail.length == 10">
                 <p class="text-light">{{index + 1}}. Mail: <span>{{item}}</span></p>
             </div>
             <button @click="emailRandom" class="bg-primary border-0 text-light rounded-2">Genera 10 Mail</button>
